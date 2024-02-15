@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/dist/css/splide.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide("#slide-1");
+        splide.mount();
+        var splide2 = new Splide("#slide-2");
+        splide2.mount();
+      });
+    </script>
   </head>
 
   <body>
@@ -20,7 +36,7 @@
               alt="Rubén Sánchez"
             />
           </div>
-          <div>
+          <div class="prrofile_info">
             <p class="profile_title">
               Desarrollador de Software Web Full Stack Node JS.
             </p>
@@ -28,20 +44,25 @@
               Desarrollador de Aplicaciones de Escritorio windows.
             </p>
             <p class="profile_title">Diseñador UX/UI.</p>
+            <p class="profile_title">Git.</p>
             <p class="profile_title">Matemático.</p>
-            <p class="description profile_description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,
-            </p>
-            <h1 class="profile_name">
-              <span class="profile_name_firstName">Rubén</span>
-              <span class="profile_name_lastName">Sánchez</span>
-            </h1>
-            <a class="downloadBtn" href="./cv.pdf" download="cv.pdf">
-              <button class="button-down">Descargar CV</button>
+            <a href="#info-personal">
+              <h1 class="profile_name">
+                <span class="profile_name_firstName">Rubén</span>
+                <span class="profile_name_lastName">Sánchez</span>
+              </h1>
             </a>
           </div>
+        </div>
+        <div class="profile-btns">
+          <a class="downloadBtn" href="./cv.pdf" download="cv.pdf">
+            <button class="button-down">Descargar CV</button>
+          </a>
+          <a href="#contact-form">
+            <button class="btn-correo">
+              <img src="/public/images/304967.svg" alt="" />
+            </button>
+          </a>
         </div>
       </div>
       <div class="skills">
@@ -49,71 +70,75 @@
           Herramientas de desarrollo &ensp;
           <span class="title-svg">
             <i data-feather="code"></i>
-            
           </span>
         </h3>
+        <hr />
         <ul class="skills_list description">
-          <li>
-            <section class="skill-box">
+          <li class="skills-li">
+            <section class="skill-box" data-animation="down">
               <img class="img-icono" src="/public/images/nodejs.png" />
+              Node JS
             </section>
-            Node JS
           </li>
-          <li>
-            <section>
+          <li class="skills-li">
+            <section class="skill-box" data-animation="down">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 128 128"
                 id="express"
+                width="32"
+                height="32"
               >
                 <path
                   d="M126.67 98.44c-4.56 1.16-7.38.05-9.91-3.75-5.68-8.51-11.95-16.63-18-24.9-.78-1.07-1.59-2.12-2.6-3.45C89 76 81.85 85.2 75.14 94.77c-2.4 3.42-4.92 4.91-9.4 3.7L92.66 62.34 67.6 29.71c4.31-.84 7.29-.41 9.93 3.45 5.83 8.52 12.26 16.63 18.67 25.21C102.65 49.82 109 41.7 115 33.26c2.41-3.42 5-4.72 9.33-3.46-3.28 4.35-6.49 8.63-9.72 12.88-4.36 5.73-8.64 11.53-13.16 17.14-1.61 2-1.35 3.3.09 5.19C109.9 76 118.16 87.1 126.67 98.44zM1.33 61.74c.72-3.61 1.2-7.29 2.2-10.83 6-21.43 30.6-30.34 47.5-17.06C60.93 41.64 63.39 52.62 62.9 65H7.1c-.84 22.21 15.15 35.62 35.53 28.78 7.15-2.4 11.36-8 13.47-15 1.07-3.51 2.84-4.06 6.14-3.06-1.69 8.76-5.52 16.08-13.52 20.66-12 6.86-29.13 4.64-38.14-4.89C5.26 85.89 3 78.92 2 71.39c-.15-1.2-.46-2.38-.7-3.57Q1.33 64.78 1.33 61.74zM7.2 60.25H57.63c-.33-16.06-10.33-27.47-24-27.57C18.63 32.56 7.85 43.7 7.2 60.25z"
                 ></path>
               </svg>
+              Express
             </section>
-            Express
           </li>
-          <li>
-            <section class="skill-box">
+          <li class="skills-li">
+            <section class="skill-box" data-animation="down">
               <img class="img-icono" src="/public/images/mongodb.png" />
+              MongoDB
             </section>
-            MongoDB
           </li>
-          <li>
-            <section class="skill-box">
+          <li class="skills-li">
+            <section class="skill-box" data-animation="down">
               <img class="img-icono" src="/public/images/html.png" />
+              HTML
             </section>
-            HTML
           </li>
-          <li>
-            <section class="skill-box">
+          <li class="skills-li">
+            <section class="skill-box" data-animation="down">
               <img class="img-icono" src="/public/images/css.png" />
+              CSS
             </section>
-            CSS
           </li>
 
-          <li>
-            <section class="skill-box">
+          <li class="skills-li">
+            <section class="skill-box" data-animation="down">
               <img class="img-icono" src="/public/images/js.png" />
+              JavaScript
             </section>
-            JavaScript
           </li>
-          <li>
-            <section class="skill-box">
+
+          <li class="skills-li">
+            <section class="skill-box" data-animation="down">
               <img class="img-icono" src="/public/images/react.png" />
+              React JS
             </section>
-            React JS
           </li>
-          <li>
-            <section class="skill-box">
+
+          <li class="skills-li">
+            <section class="skill-box" data-animation="down">
               <img class="img-icono" src="/public/images/figma.png" />
+              Figma
             </section>
-            Figma
           </li>
         </ul>
       </div>
 
-      <div class="group-1">
+      <div class="grupo-1" id="info-personal">
         <div class="edu">
           <h3 class="title">
             Formación &ensp;
@@ -121,6 +146,7 @@
               <i data-feather="book-open"></i>
             </span>
           </h3>
+          <hr />
           <div class="edu_item">
             <ul>
               <li>
@@ -167,92 +193,389 @@
         </div>
 
         <div class="about">
-          <h3 class="title">Acerca</h3>
-          <div class="certification_item">
-            <p class="item_preTitle">2018</p>
-            <h4 class="item_title">Frontend Developer</h4>
-            <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,
-            </p>
-          </div>
+          <h3 class="title">
+            Acerca de &ensp;
+            <span class="title-svg">
+              <i data-feather="info"></i>
+            </span>
+          </h3>
+          <hr />
+          <p class="item_descripcion">
+            Freelance. proactivo, curioso, autodidacta por naturaleza.
+          </p>
+          <p class="item_descripcion">
+            Comencé programnando en COBOL, luego pasé a usar Clarion para los
+            proyectos de escritorio.
+          </p>
+          <p class="item_descripcion">
+            Hace aproximadamente cuatro años empecé a formarme en el desarrollo
+            web, en Deep Learning y Machine Learning.
+          </p>
+          <p class="item_descripcion">
+            Paralelamente relizo la carrera de licencitura en Matemática en la
+            UNNE, cerca de graduarme.
+          </p>
         </div>
       </div>
-      <div class="group-2">
-        <div class="exp">
-          <h3 class="title">Proyectos</h3>
-          <div class="exp_item">
-            <p class="item_preTitle">2019 - present</p>
-            <h4 class="item_title">Rashid Software LTD.</h4>
-            <p class="item_subtitle">Frontend Developer</p>
-            <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,
-            </p>
-          </div>
-          <div class="exp_item">
-            <p class="item_preTitle">2019 - present</p>
-            <h4 class="item_title">Rashid Software LTD.</h4>
-            <p class="item_subtitle">Frontend Developer</p>
-            <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,
-            </p>
-          </div>
-        </div>
-
-        <div class="interest">
-          <h3 class="title">Interest</h3>
-          <div class="interest_items">
-            <div class="interest_item">
-              <i data-feather="music"></i>
-              <span>Music</span>
+      <!-- fin grupo 1 -->
+      <!--Proyecto 1 -->
+      <div class="grupo-2">
+        <h3 class="title">
+          Proyectos &ensp;
+          <span class="title-svg">
+            <i data-feather="layers"></i>
+          </span>
+        </h3>
+        <hr />
+        <div class="proyectos">
+          <article class="proy-card">
+            <div class="card-box" data-animation="show">
+              <h3 class="titulo-card">Tienda Online</h3>
+              <section
+                id="slide-1"
+                class="splide"
+                aria-label="Beautiful Images"
+              >
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img
+                        loading="lazy"
+                        src="/public/images/e-com1.png"
+                        alt=""
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        loading="lazy"
+                        src="/public/images/e-com2.png"
+                        alt=""
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        loading="lazy"
+                        src="/public/images/e-com4.png"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <div class="descripcion-card">
+                <p>
+                  Proyecto MERN. El backend está construido con NodeJs y Express
+                  JS. Carga las imágenes en el Servicio Cloudinary. La base de
+                  Datos MongoDB se aloja en la nube de Mongo: MongoDB Atlas. El
+                  frontend hecho con react, framework CSS Bootstrap. Utiliza
+                  React Redux Toolkit para la interacción con la Base de Datos.
+                </p>
+              </div>
+              <div class="link-proyecto">
+                <a
+                  href="https://zapcalzados.netlify.app/"
+                  alt="Tienda Online zapatillas"
+                  target="_blank"
+                >
+                  Ir al sitio web
+                  <span>
+                    <i data-feather="external-link"></i>
+                  </span>
+                </a>
+              </div>
             </div>
-            <div class="interest_item">
-              <i data-feather="book"></i>
-              <span>Books</span>
+          </article>
+          <!-- proyecto 2 -->
+          
+          <article class="proy-card">
+            <div class="card-box" data-animation="show">
+              <h3 class="titulo-card">Aplicación Clima</h3>
+              <section
+                id="slide-2"
+                class="splide"
+                aria-label="Beautiful Images"
+              >
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img
+                        loading="lazy"
+                        src="/public/images/clima3.png"
+                        alt=""
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        loading="lazy"
+                        src="/public/images/clima1.png"
+                        alt=""
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        loading="lazy"
+                        src="/public/images/clima2.png"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <!-- Segundo Silce-->
+              <div class="descripcion-card">
+                <p>
+                  Sencillo proyecto Javascript puro. Uso de la API
+                  openweathermap.org
+                </p>
+              </div>
+              <div class="link-proyecto">
+                <a
+                  href="https://saruben.github.io/Clima-V1-JS/"
+                  alt="Aplicacón Clima"
+                  target="_blank"
+                >
+                  Ir al sitio web
+                  <span>
+                    <i data-feather="external-link"></i>
+                  </span>
+                </a>
+              </div>
             </div>
-            <div class="interest_item">
-              <i data-feather="map"></i>
-              <span>Travel</span>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
+      <!--Fin Proyectos-->
       <hr />
-      <div class="group-3">
-        <div class="contact">
-          <h3 class="title">Contact</h3>
-          <div class="contact_info">
-            <p class="description">Chittagong, Bangladesh</p>
-            <p class="description">+880 ** *** ***</p>
-            <p class="description">shaifarfan08@gmail.com</p>
+      <!-- Servicios-->
+      <div class="servicios">
+        <h3 class="title">Servicios</h3>
+        <section class="card-servicios">
+          <div class="s-card">
+            <div class="s-circ-icon s-circ-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-globe"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+              </svg>
+            </div>
+
+            <h3 class="s-title">Diseño Web</h3>
+            <p>
+              Diseño y desarrollo de páginas Web estaticas simples usando sólo
+              HTML, CSS y Javascript ó bien usando el framework ASTRO JS ó Full
+              stack MERN (NodeJS, Express, MongoDb, React). Frameworks CSS
+              Bootstrap o Tailwind. Portfolios.
+            </p>
           </div>
+          <!--segunda card -->
+
+          <div class="s-card">
+            <div class="s-circ-icon s-circ-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-terminal"
+              >
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </div>
+            <h3 class="s-title">Aplicaciones</h3>
+            <p>
+              Aplicaciones de escritorio para entornos windows. Sistemas para
+              Pymes o profesionales diseñados a medida. Especializacion en
+              sistemas para estaciones de servicio. Sistemas contables, de
+              facturación electrónica.
+            </p>
+          </div>
+          <!-- tercera card -->
+          <div class="s-card">
+            <div class="s-circ-icon s-circ-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-infinity"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.68 5.792 7.345 7.75 5.681 9.708a2.75 2.75 0 1 1 0-3.916ZM8 6.978 6.416 5.113l-.014-.015a3.75 3.75 0 1 0 0 5.304l.014-.015L8 8.522l1.584 1.865.014.015a3.75 3.75 0 1 0 0-5.304l-.014.015zm.656.772 1.663-1.958a2.75 2.75 0 1 1 0 3.916z"
+                />
+              </svg>
+            </div>
+            <h3 class="s-title">Matemática</h3>
+            <p>
+              Enseñanza y clase de apoyo a particulares, estudiantes
+              secunadrios, terciarios y/o universitarios. Todas las ramas:
+              Álgebra, Geometría, Estadística, Análisis (llamado Cálculo en
+              algunas carreras).
+            </p>
+          </div>
+        </section>
+      </div>
+      <!-- Fin servicios-->
+
+      <div class="grupo-3">
+        <div class="sociales">
+          <h3 class="title">Sociales</h3>
+          <hr />
+          <section class="items-sociales">
+            <div class="social-item">
+              <div class="social-item-a">
+                <i data-feather="at-sign"></i>
+                sinapsisdev@gmail.com
+              </div>
+              <div
+                class="btn-copia"
+                onclick="copiarContenido('sinapsisdev@gmail.com')"
+              >
+                <i data-feather="copy"></i>
+              </div>
+            </div>
+            <div class="social-item">
+              <div class="social-item-a">
+                <a href="https://github.com/Ruben486" target="_blank">
+                  <i data-feather="github"></i>
+                </a>
+                /Ruben486
+              </div>
+              <div
+                class="btn-copia"
+                onclick="copiarContenido('https://github.com/Ruben486')"
+              >
+                <i data-feather="copy"></i>
+              </div>
+            </div>
+            <div class="social-item">
+              <div class="social-item-a">
+                <a
+                  href="https://linkedin.com/in/ruben-sanchez-bb6427215"
+                  target="_blank"
+                >
+                  <i data-feather="linkedin"></i>
+                </a>
+                /ruben-sanchez-bb6427215
+              </div>
+              <button
+                class="btn-copia"
+                onclick="copiarContenido('https://linkedin.com/in/ruben-sanchez-bb6427215')"
+              >
+                <i data-feather="copy"></i>
+              </button>
+            </div>
+          </section>
         </div>
-        <div class="social">
-          <h3 class="title">Socials</h3>
-          <div class="social_items">
-            <a href="#" target="_b" class="social_item">
-              <i data-feather="github"></i>
-              <span>/shaifarfan</span>
-            </a>
-            <a href="#" target="_blank" class="social_item">
-              <i data-feather="twitter"></i>
-              <span>/shaifarfan08</span>
-            </a>
-            <a href="#" target="_blank" class="social_item">
-              <i data-feather="linkedin"></i>
-              <span>/shaifarfan08</span>
-            </a>
-          </div>
+        <div class="contacto">
+          <h3 class="title">Contacto</h3>
+          <!--Formulario-->
+          <form id="contact-form">
+            <fieldset>
+              <label class="is-required" for="user_name">Nombre:</label>
+              <input
+                type="text"
+                id="name"
+                required
+                name="user_name"
+                placeholder="Nombre"
+              />
+            </fieldset>
+
+            <fieldset>
+              <label class="is-required" for="user_email"
+                >Correo electrónico:</label
+              >
+              <input
+                type="email"
+                id="mail"
+                required
+                name="user_email"
+                placeholder="ejemplo@correo.com"
+              />
+            </fieldset>
+            <fieldset>
+              <label class="is-required" for="user_message">Mensaje:</label>
+              <textarea name="user_message" id="msg" rows="10" required>
+              </textarea>
+            </fieldset>
+            <input type="submit" value="Enviar" class="btn-submit" />
+            <p id="msg_email"></p>
+          </form>
         </div>
       </div>
     </div>
+    <!--Scripts -->
     <script>
       feather.replace();
     </script>
+    <script src="/dist/js/oberver.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "ef3LxkzodsWjUGg4O",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            let msg = document.getElementById("msg_email");
+            event.preventDefault();
+            // these IDs from the previous steps
+            // servicio, template //
+            emailjs.sendForm("service_4ths9pw", "template_wck81id", this).then(
+              () => {
+                console.log("SUCCESS!");
+                msg.innerText = "El correo fue enviado exitosamente !";
+              },
+              (error) => {
+                console.log("FAILED...", error);
+                msg.innerText = "Ha ocurrido un error en el envío del correo";
+              }
+            );
+            setTimeout(() => {
+              document.getElementById("contact-form").reset();
+              msg.innerText = "";
+            }, "5000");
+          });
+      };
+    </script>
+    <script>
+      const copiarContenido = async (texto) => {
+        try {
+          await navigator.clipboard.writeText(texto);
+          console.log("Contenido copiado al portapapeles");
+        } catch (err) {
+          console.error("Error al copiar: ", err);
+        }
+      };
+    </script>
+    <!--Fin de scripts-->
   </body>
 </html>
