@@ -7,14 +7,13 @@ function triggerAnimation(entries) {
 };
 
 const proyectos = document.querySelectorAll(".proy-card");
-
 function triggerAnimation2(entries) {
   entries.forEach(entry => {
     const cardProyecto = entry.target.querySelector(".card-box")
     cardProyecto.classList.toggle('unset',entry.isIntersecting)
   })
 };
-
+const grillaAes = document.querySelectorAll(".proy-card");
 const options = {
   // contenedor o area visible //
   // rootmargin es el alcance el contenedor especificado //
