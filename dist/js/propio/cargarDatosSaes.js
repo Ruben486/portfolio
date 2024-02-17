@@ -1,6 +1,6 @@
 const cargarDatos = async () => {
     try {
-      const URI = "../../../jsonsaes.json";
+      const URI = "jsonsaes.json";
       const respuesta = await fetch(URI);
       if (respuesta.status === 200) {
         const data = await respuesta.json();
