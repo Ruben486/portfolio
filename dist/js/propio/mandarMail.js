@@ -6,7 +6,11 @@ window.onload = function () {
         event.preventDefault();
         // these IDs from the previous steps
         // servicio, template //
-        emailjs.sendForm("service_4ths9pw", "template_wck81id", this).then(
+        //emailjs.sendForm("service_4ths9pw", "template_wck81id", this)
+        emailjs.sendForm(config.email_servicio_key,
+           config.email_template_key,
+            this)
+            .then(
           () => {
             console.log("SUCCESS!");
             msg.innerText = "El correo fue enviado exitosamente !";
