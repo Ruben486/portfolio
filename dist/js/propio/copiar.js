@@ -1,4 +1,4 @@
-const copiarContenido = async (texto) => {
+const copiarClipboard = async (texto) => {
     try {
       await navigator.clipboard.writeText(texto);
       console.log("Contenido copiado al portapapeles");
