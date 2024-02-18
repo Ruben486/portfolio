@@ -30,6 +30,7 @@ body {
   font-family: "Montserrat", Inter, sans-serif;
   background-color: black;
   color: var(--blanco-humo);
+  
 }
 
 img {
@@ -41,7 +42,6 @@ img:hover, svg:hover{
   filter: grayscale(0);
   transition: 0.5s ease-in-out;
 }
-
 
 
 a {
@@ -225,8 +225,8 @@ a {
  
 }
 .img-icono {
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
 }
 
 .skills img,
