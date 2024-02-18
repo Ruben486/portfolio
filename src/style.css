@@ -41,12 +41,15 @@ img:hover {
   transition: 0.5s ease-in-out;
 }
 
-.skills img, .skills svg , .proyectos img{
+.skills img,
+.skills svg,
+.proyectos img {
   filter: grayscale(1);
   transition: 0.5s ease-in-out;
-} 
+}
 
-.skills_list img:hover, .skills_list svg:hover {
+.skills_list img:hover,
+.skills_list svg:hover {
   cursor: pointer;
   filter: grayscale(0);
   transition: 0.5s ease-in-out;
@@ -71,7 +74,6 @@ a {
   justify-content: space-between;
   align-items: start;
   gap: 5rem;
-  
 }
 
 .title {
@@ -106,7 +108,6 @@ a {
   width: 46px;
   height: 46px;
 }
- 
 
 /* profile */
 .profile {
@@ -116,7 +117,7 @@ a {
 .profile_container {
   display: flex;
   gap: 2rem;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: start;
 }
 .profile-img {
@@ -399,10 +400,9 @@ a {
 #grilla-saes {
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
-  
 }
 .artic-saes {
   padding: 5px;
@@ -419,7 +419,6 @@ a {
   font-size: small;
   color: var(--blanco-humo);
   overflow: hidden;
-
 }
 /* fin nueva version proyecto saes */
 
@@ -430,7 +429,7 @@ a {
   top: 0;
   left: 0;
   z-index: 2;
-  padding: 5px; 
+  padding: 5px;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -441,12 +440,11 @@ a {
   position: relative;
   width: 80%;
   height: auto;
-  margin: 0 auto; 
+  margin: 0 auto;
   -webkit-animation-name: animarsuperior;
   -webkit-animation-duration: 0.5s;
   animation-name: animarsuperior;
   animation-duration: 0.5s;
-  
 }
 .titulo-modal {
   background: var(--bg-card);
@@ -535,14 +533,16 @@ hr {
 }
 
 .s-card {
-  height: 250px;
+  height: auto;
   font-size: 14px;
   background: var(--sec-bg);
   border: var(--borde);
   border-radius: var(--radio-borde);
   padding: 1.5rem;
-  overflow: auto;
+  position: relative;
+  margin-top: 2rem;
 }
+
 .s-title {
   color: var(--primary-color);
   font-weight: 600;
@@ -550,6 +550,7 @@ hr {
   text-align: center;
   margin-top: 1rem;
 }
+
 .s-circ-icon {
   background: inherit;
   position: absolute;
@@ -558,19 +559,16 @@ hr {
   border-radius: 50%;
   border: var(--borde);
   text-align: center;
+  z-index: 2;  
 }
-.s-circ-1, .s-circ-2, .s-circ-3 {
-  top: -17px;
-}
-.s-circ-1 {
-  left: 13.5%;
-}
-.s-circ-2 { 
-  left: 47.5%;
-}
+
+.s-circ-1,
+.s-circ-2,
 .s-circ-3 {
-  left: 81.5%;
+  top: -18px;
+  left: 46.5%;
 }
+
 /* fin de servicios */
 
 .grupo-3 {
@@ -717,22 +715,35 @@ form textarea {
   .profile {
     margin-bottom: 0;
   }
+  .grupo-1 {
+    flex-direction: column;
+  }
   .item_descripcion {
     font-size: 14px;
   }
   .s-title {
     font-size: 1.5rem;
   }
+  .card-servicios {
+    grid-template-columns: 1fr;
+  }
   hr {
     margin: 0 auto;
+    text-align: start;
   }
   .grupo-3 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
-  p, .social-item, .item_descripcion,  .title{
-    font-size: 12px;
+  .title {
+    font-size: 2rem;
+    text-align: start;
   }
-  
+
+  p,
+  .social-item,
+  .item_descripcion {
+    font-size: 14px;
+  }
 }
