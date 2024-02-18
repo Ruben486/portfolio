@@ -718,6 +718,9 @@ form textarea {
   .grupo-1 {
     flex-direction: column;
   }
+  .proy-card {
+    width: 100%;
+  }
   .item_descripcion {
     font-size: 14px;
   }
@@ -728,7 +731,7 @@ form textarea {
     grid-template-columns: 1fr;
   }
   hr {
-    margin: 0 auto;
+    margin: 0;
     text-align: start;
   }
   .grupo-3 {
