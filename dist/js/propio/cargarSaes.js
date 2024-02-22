@@ -1,4 +1,5 @@
-const datosSaes = [
+// import {datosSaes} from "./datos.js";
+/* const datosSaes = [
   {
     img: "./dist/imagenes/aes/aes-2.jpg",
     desc: "json-1.jpg",
@@ -35,9 +36,8 @@ const datosSaes = [
     img: "./dist/imagenes/aes/aes-10.jpg",
     desc: "json-9.jpg",
   },
-];
+]; */
 const armarSAES = () => {
-  console.log(datosSaes);
   const sectionSaes = document.getElementById("grilla-saes");
   const datosHtml = datosSaes
     .map(
@@ -85,6 +85,7 @@ const handleModal = () => {
     });
   }
 };
+
 if (datosSaes.length > 0) {
   armarSAES();
 }
