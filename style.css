@@ -30,19 +30,18 @@ body {
   font-family: "Montserrat", Inter, sans-serif;
   background-color: black;
   color: var(--blanco-humo);
-  
 }
 
 img {
   width: 100%;
 }
 
-img:hover, svg:hover{
+img:hover,
+svg:hover {
   cursor: pointer;
   filter: grayscale(0);
   transition: 0.5s ease-in-out;
 }
-
 
 a {
   text-decoration: none;
@@ -92,8 +91,6 @@ a {
   cursor: pointer;
   color: var(--blanco-humo);
 }
-
-
 
 /* profile */
 .profile {
@@ -222,7 +219,6 @@ a {
   width: 68px;
   height: 68px;
   padding: 4px;
- 
 }
 .img-icono {
   width: 35px;
@@ -243,7 +239,7 @@ a {
 }
 
 .p-skill {
-  font-size:smaller;
+  font-size: smaller;
 }
 
 [data-animation="down"] {
@@ -534,6 +530,9 @@ hr {
   margin: 0;
 }
 /* servicios */
+.servicios {
+  position: relative;
+}
 .servicios h3 {
   margin-bottom: 2rem;
 }
@@ -590,7 +589,27 @@ hr {
   justify-content: center;
   align-items: start;
 }
-
+.gradiente-a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+  z-index: -1;
+}
+.gradiente-c {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, #e9eee4 0%, #8adfe2 100%);
+  filter: blur(900px);
+  /* background: ghostwhite; */
+  z-index: 0;
+}
 /* sociales */
 .sociales {
   flex: 1;
@@ -623,6 +642,18 @@ hr {
   color: var(--seconday-color);
 }
 
+.section-logo {
+  width: 250px;
+  height: 250px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+}
 .btn-copia {
   width: 20px;
   height: 20px;
