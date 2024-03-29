@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 * {
   padding: 0;
@@ -65,9 +65,10 @@ a {
 }
 
 .title {
+  font-family: "Anton", sans-serif;
   color: var(--primary-color);
-  font-weight: 700;
-  font-size: 2.2rem;
+  font-weight: 500;
+  font-size: 3rem;
   margin-top: 5rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -76,8 +77,8 @@ a {
 .title-svg {
   background: black;
   color: var(--text-color);
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .item_descripcion {
@@ -90,6 +91,11 @@ a {
 .item_descripcion:hover {
   cursor: pointer;
   color: var(--blanco-humo);
+}
+.pie-titulo-seccion {
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 /* profile */
@@ -156,6 +162,7 @@ a {
   color: var(--blanco-humo);
   transition: 0.3s;
 }
+
 .btn-correo {
   background: inherit;
   border: var(--borde);
@@ -288,11 +295,23 @@ a {
   color: var(--blanco-humo);
 }
 /* proyectos */
+.t-proyectos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  position: relative;
+}
+
+
+
 .proyectos {
   display: flex;
   gap: 5rem;
   flex-wrap: wrap;
 }
+
 .proy-card {
   font-family: "Montserrat", sans-serif;
   width: 80%;
@@ -445,6 +464,7 @@ a {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
 .contenido-modal {
   position: relative;
   width: 80%;
@@ -518,7 +538,6 @@ a {
 }
 
 hr {
-  /* grid-column: 1/-1; */
   width: 80%;
   margin: 0 auto;
   margin-top: 2rem;
@@ -533,8 +552,60 @@ hr {
 .servicios {
   position: relative;
 }
-.servicios h3 {
-  margin-bottom: 2rem;
+
+.t-servicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 4rem;
+}
+
+.t-servicios h3,
+.t-proyectos h3 {
+  font-size: 6rem;
+  position: absolute;
+}
+
+.t-servicios-border,
+.t-proyectos-border
+ {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.t-servicios-wave, 
+.t-proyectos-wave {
+  color: #eb4b80;
+  animation: wave 3s ease-in-out infinite;
+}
+@keyframes wave {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 20%,
+      10% 48%,
+      33% 54%,
+      54% 80%,
+      70% 61%,
+      84% 65%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 65%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
 }
 
 .card-servicios {
